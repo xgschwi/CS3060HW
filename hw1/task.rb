@@ -7,6 +7,8 @@ def function1
        
        	i = 1
 
+	print "Please enter 3 lines of text to be stored to a file: "
+
 	while i < 4 do # takes input by lines and writes to the file
 	 line = gets
 	 linesFile.write(line)
@@ -17,7 +19,7 @@ end
 
 def function2
     # Complete this function
-	p "Please type the name of a text file: " 
+	print "Please type the name of a text file. Suggesting \'f2Test': " 
 	fileName = gets # Takes the name of the textfile, particularly f2Test.txt
 
 	# Establishes patterns to be detected in text file
@@ -31,7 +33,7 @@ def function2
 	fileName.chomp! # Removes endline character in the string
 
 	file = File.new("#{fileName}.txt", "r") # Opens desired file, fileName
-
+	
 	file.each do |line|
 
 		# Detects text patterns and changes flag settings as needed
@@ -96,45 +98,45 @@ def function5
 
 
  aFile.each do |line|
-	line.scan(/[-\w]+(?:'\w+)*/){|w| words[i]= w; i+= 1} #
+	line.scan(/[-\w]+(?:'\w+)*/){|w| words[i]= w; i+= 1} # Scans for "words" where spaces surround a group of word chars
+  # and dashes and apostrophes within "words" are included inside a "word"
  end
-
  counter = 0
 
  words.slice!(i) #To remove an empty string at the end
 
- i -= 1
+ i -= 1 # Reconfigures size because of empty string
  count = 0
 
  p "The total number of words are: #{i} words"
 
  words.map!(&:downcase) # converts all strings to lowercase to more accurately count words
 
- words.each{|w| w.downcase; freq[w] += 1}
+ words.each{|w| w.downcase; freq[w] += 1} # For all "words" in words array, all lowercase "words" are stored in the hash freq
 
-#freq.each{|k,v| if freq[k] = 
- freq = freq.sort_by{|k, v| -v}
+ freq = freq.sort_by{|k, v| -v} # In the hash freq, the keys are sorted by value and freq assigned to the array storing these sorted keys and values
 
  for i in freq do
-	 count += 1
+	 count += 1 # The total number of words are counted here in the array freq
  end
- pattern = / s/
+
  p "#{count} is the number of unique words"
+ 
  p "The second most frequent word is \'#{freq[1][0]}\' and its frequency is: #{freq[1][1]}"
  
- freq.to_h
-count = 0
+ freq.to_h # Converts freq array back to hash form
+
+
+ count = 0
  
+ # For each key in the hash, every key is checked to see if the key starts with the lettter 's'
  freq.each do |k , v|
 	 if k.start_with? 's' 
 		 count += 1
 	 end
  end
+
  p "The number of words that start with s are: #{count}"
-
-# print freq.values
- 
-
 
 end
 
