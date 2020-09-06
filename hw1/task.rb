@@ -32,8 +32,14 @@ def function2
 
 	fileName.chomp! # Removes endline character in the string
 
-	file = File.new("#{fileName}.txt", "r") # Opens desired file, fileName
+	# Checks to see if file exists so no errors appear with nonexistent files
+	while !File.exist?("#{fileName}.txt") do
+		print "Please enter a valid text file: "
+		fileName = gets
+		fileName.chomp!
+	end
 	
+	file = File.new("#{fileName}.txt", "r") # Opens desired file, fileName
 	file.each do |line|
 
 		# Detects text patterns and changes flag settings as needed
@@ -65,20 +71,29 @@ end
 
 def function4
     # Complete this function
-	p "Choose a number between 10 and 200: "
+	print "Choose a number between 10 and 200: "
 	
 	x = gets
+
+	x = x.to_i
+
+	while x < 10 || x > 200 do
+		print "Choose a number in the given range: "
+		x = gets
+		x = x.to_i
+	end
 
 	heads = 0
 	tails = 0
 
 	arr = []
 
-	for i in 0..(x.to_i)-1 # to fill array with "heads" or "tails" 
+	x -= 1 # To accomodate for 0th index of array
+	for i in 0..x # to fill array with "heads" or "tails" 
 		arr[i] = rand(0..1)
 	end
 
-	for i in 0..(x.to_i)-1 # Counter for heads and tails in the array
+	for i in 0..x # Counter for heads and tails in the array
 		if arr[i] == 1
 			heads += 1
 		elsif arr[i] == 0
