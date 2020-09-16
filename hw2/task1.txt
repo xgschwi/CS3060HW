@@ -1,0 +1,14 @@
+Here is a text file with some great strings in it
+These strings can determine how much output
+random line without the intended keyword in it
+is sent to the user, if 'string' is their input,
+so we will see if this line is printed
+this is a fun task to do
+if not, surely this line #5 will be printed because of the strings in it
+a string is pretty cool
+something, something, something, and other words for this line
+some more random words and such and what not
+If you are reading this line, I hope you're having a great day!
+you see that other line said string so it was included
+that is unless the word you searched for is not string so
+please input string so task1 will produce the intended output
