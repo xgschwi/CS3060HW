@@ -1,22 +1,16 @@
 # Task 1.rb written by Xavier Gschwind
 i = 1 # line counter
 
-print "Please enter a file that you would like to search in (omit file extension and use task1): "
-fn = gets
+# substring to be searched for
+inStr = ARGV[0] # Takes arguments from the command line
 
-fn.chomp! # remove endline character
+# fn should be "task1"
+fn = ARGV[1]
 
 while !File.exist?("#{fn}.txt") do
-	print "Please enter a valid file name (task1): "
-	fn = gets
-	fn.chomp! # remove endline character
+	p "Please enter a valid file name (task1) when you execute this program"
+	exit
 end
-
-puts
-
-print "Please enter a string that you would like to search for in this file: "
-inStr = gets # "strings" was a great indicator to test where it is detected
-inStr.chomp!
 
 file = File.new("#{fn}.txt", "r")
 
