@@ -2,7 +2,7 @@
 
 This is your 2nd homework assignment in Ruby.
 
-For task 1, you may input any file name however, the program will only work if the file name is a name of a text file in the same directory as the task. The input file I use is "task1.txt". The user only has to input the name itself, not the file extention".txt". So the user in this case should input "task1" for the file name. From there, the user may put any word they want to be found from that file as the user's next input. The intended keyword for this task is "string".
+For task 1, you have to input command line arguments. Any word may be typed for the string to be search for after the ruby task1.rb command, however, string is the intended keyword. Next, you may input any file name however, the program will only work if the file name is a name of a text file in the same directory as the task. The input file I use is "task1.txt". The user only has to input the name itself, not the file extention".txt". So the user in this case should input "task1" for the file name. Each line, with a line number, containing the string from the command line argument will be printed. If a nonexstent file is used, you will have to renter the command for the program.
 
 For task 2, the user does not have to do any work for the functions to execute. This task will create an array of 40 elements with values between 10 and 80 in it. This array is passed to a function that prints the square of the elements in A. Then, each element is printed 4 times, then all the elements that are multiples of 3 are printed. Then, the product of all elements in the array is calculated.
 
