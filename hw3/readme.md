@@ -90,9 +90,15 @@ Y = toppings ;
 X = ronni,
 Y = frosting.
 
+?- notDesert(corn).
+true .
+
+?- notDesert(cake).
+false.
+
 ?- halt.
 xgschwi@csvm14:~/fa20-cs3060-hw/hw3$ swipl task2.pl
-Welcome to SWI-Prolog (threaded, 64 bits, version 8.2.1)
+Welcome to SWI-Prolog (threae.ed, 64 bits, version 8.2.1)
 SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
 Please run ?- license. for legal details.
 
