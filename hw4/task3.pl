@@ -1,6 +1,6 @@
 /* here you write your code for Task 3 */
 % Written by Xavier Gschwind
-% 5634563456....
+
 inDomain([], _ ). /* base case */
 inDomain([H|T], ValList) :- member(H, ValList), inDomain(T, ValList).
 

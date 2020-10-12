@@ -15,10 +15,7 @@ hasFlightRoute(X,Y):- hasDirectFlight(X, Y). % has flight route is true
 
 % hasFlightRoute is true if there is a direct flight, and that direct flight's Y
 % destination is checked for more flight routes with the recursive function.
-hasFlightRoute(X, Z):- hasDirectFlight(X,Y), hasFlightRoute(Y,Z)
-.
-
-%findFlightRoute(newOrleans, chicago):-write(newOrleans), write("--"), write(chicago). %original base case
+hasFlightRoute(X, Z):- hasDirectFlight(X,Y), hasFlightRoute(Y,Z).
 
 % X has a route to Y and Y has a route to Location, so the route is printed via X to Y, and this repeats until Y's next stop is location. Then, the final case is called below this rule.
 findFlightRoute(X, Location) :- hasFlightRoute(X, Y), hasFlightRoute(Y, Location), write(X), write("--"), write(Y), write("  "), !, findFlightRoute(Y, Location).

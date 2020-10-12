@@ -25,17 +25,67 @@ deleteAll(A, [a,b,c,d...]). Deletes all of A from the list in the second argumen
 
 
 
+xgschwi@csvm14:~/fa20-cs3060-hw/hw4$ swipl task2.pl
+Welcome to SWI-Prolog (threaded, 64 bits, version 8.2.1)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- writerDelFirst(b, [b,c,d,b,c,b], Result).
+Please enter the name of the file you would like to output to: task2.
+
+Result = [c, d, b, c, b] .
+
+?- writerDelFirst(c, [b,c,d,b,c,b], Result).
+Please enter the name of the file you would like to output to: task2.
+
+Result = [b, d, b, c, b] .
+
+?- writerDelAll(c, [b,c,d,b,c,b], Result).
+Please enter the name of the file you would like to output to: task2b
+|: .
+
+Result = [b, d, b, b] .
+
+?- writerDelAll(b, [b,c,d,b,c,b], Result).
+Please enter the name of the file you would like to output to: task2b.
+
+Result = [c, d, c] .
+
+?- halt.
+xgschwi@csvm14:~/fa20-cs3060-hw/hw4$ cat task2
+
+[c,d,b,c,b], [b,d,b,c,b], xgschwi@csvm14:~/fa20-cs3060-hw/hw4$ cat task2b
+[c,d,c],
+[b,d,b,b], [c,d,c], xgschwi@csvm14:~/fa20-cs3060-hw/hw4$
+
 
 
 
 For task3, type the command swipl task3.pl. Then input a sudoku puzzle with empty spaces as underscores in the form "sudoku([1st row Col1, 1st row col2, _, ...], Solution). Input every number of the puzzle in the form where you type everything row by row. For the sake of SWI Prolog, it is best to input the underscores close to the beginning and a minimal number of _'s as possible for the sake of computation time.
 
 
-?- sudoku([5,_,4,6,7,8,9,1,2,                                                                                                                                                                                      6,7,2,1,9,5,3,4,8,                                                                                                                                                                                                 1,9,8,3,4,2,5,6,7,                                                                                                                                                                                                 8,5,9,7,6,1,4,2,3,                                                                                                                                                                                                 4,2,6,8,5,3,7,9,1,                                                                                                                                                                                                 7,1,3,9,2,4,8,5,6,                                                                                                                                                                                                 9,6,1,5,3,7,2,8,4,                                                                                                                                                                                                 2,8,7,4,1,9,6,3,5,                                                                                                                                                                                                 3,4,5,2,8,6,1,7,9], Solution).
+?- sudoku([5,_,4,6,7,8,9,1,2,
+	   6,7,2,1,9,5,3,4,8,
+	   1,9,8,3,4,2,5,6,7,
+	   8,5,9,7,6,1,4,2,3,
+	   4,2,6,8,5,3,7,9,1,
+	   7,1,3,9,2,4,8,5,6,
+	   9,6,1,5,3,7,2,8,4,
+	   2,8,7,4,1,9,6,3,5,                                                                                                      3,4,5,2,8,6,1,7,9], Solution).
 Solution = [5, 3, 4, 6, 7, 8, 9, 1, 2|...] ;
 false.
 
-?- sudoku([5,_,4,6,_,8,9,_,2,                                                                                                                                                                                      6,7,2,1,9,5,3,4,8,                                                                                                                                                                                                 1,9,8,3,4,2,5,6,7,                                                                                                                                                                                                 8,5,9,7,6,1,4,2,3,                                                                                                                                                                                                 4,2,6,8,5,3,7,9,1,                                                                                                                                                                                                 7,1,3,9,2,4,8,5,6,                                                                                                                                                                                                 9,6,1,5,3,7,2,8,4,                                                                                                                                                                                                 2,8,7,4,1,9,6,3,5,                                                                                                                                                                                                 3,4,5,2,8,6,1,7,9], Solution).
+?- sudoku([5,_,4,6,_,8,9,_,2,
+	   6,7,2,1,9,5,3,4,8,
+	   1,9,8,3,4,2,5,6,7,
+	   8,5,9,7,6,1,4,2,3,
+	   4,2,6,8,5,3,7,9,1,
+	   7,1,3,9,2,4,8,5,6,
+	   9,6,1,5,3,7,2,8,4,
+	   2,8,7,4,1,9,6,3,5,                                                                                                      3,4,5,2,8,6,1,7,9], Solution).
 Solution = [5, 3, 4, 6, 7, 8, 9, 1, 2|...] ;
 false.
 
