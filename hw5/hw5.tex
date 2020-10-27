@@ -1,0 +1,110 @@
+\documentclass[paper=letter, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage{enumitem}
+\usepackage{listings,multicol}
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+% \fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{hyperref}
+%----------------------------------------------------------------------------------------
+%   TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{ 
+    \normalfont \normalsize 
+    \textsc{CS 3060 Programming Languages, Fall 2020} \\ [25pt] % Your university, school and/or department name(s)
+    \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+    \huge Assignment \#5  \\ % The assignment title
+    \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+% \author{John Smith} % Your name
+
+% \date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+    \begin{center}
+         Assignment \#5\\
+        \small CS 3060 Programming Languages, Fall 2020 \\
+        \small Instructor: S. Roy \\
+        \huge Scala \#1
+    \end{center}
+    
+    \textbf{Due Date:} Oct 29 @ 11.59 PM. \\
+    \textbf{Total Points:} 60 points \\
+
+
+    \textbf{Directions:} Using the source provided via Gitlab \@ \texttt{https://gitlab.com/sanroy/fa20-cs3060-hw/},
+complete the assignment below. The process for completing this assignment should be as follows:
+
+    \begin{enumerate}[noitemsep]
+        \item You already forked the Repository ``sanroy/fa20-cs3060-hw'' to a repository ``yourId/fa20-cs3060-hw'' under your username. If not, do it now.
+        \item Get a copy of hw5 folder in ``sanroy/fa20-cs3060-hw'' repository as a hw5 folder in your repository ``yourId/fa20-cs3060-hw''
+        \item Complete the assignment, committing changes to git. Each task code should be in a separate file. As an example, task1.scala for Task 1.
+        \item Push all commits to your Gitlab repository
+        \item If you have done yet done so, add TA (username: prabeshpaudel) as a member of your Gitlab repository
+    \end{enumerate}
+
+
+
+
+    \textbf{Tasks:}
+
+      \begin{enumerate}
+
+        \item \textbf{(12 Points) Task \#1:} Write a Scala program 
+which asks the user to type 2 lines (e.g., before going to the
+next line the user will hit the 'Enter' key, etc.) on keyboard, 
+and saves the lines to a file named "myFile.txt".
+
+        \item \textbf{(12 Points) Task \#2:} Write a Scala program which asks 
+the user to type the name of a file.
+If the file-content (we are not talking about the filename string)
+contains ``Ruby'' or ``ruby'', then print ``The file content is not interesting''. 
+If the file-content contains ``Scala'' or ``scala'',
+then print ``The file content is interesting''. Otherwise, print "The file is meaningless".
+
+        \item \textbf{(12 Points) Task \#3:} Write a Scala program which 
+prints the string ``The cube of $a$ is $b$'' 50 times 
+while substituting $a$ by numbers from 5 to 54 where $b$ is $a^3$.
+
+
+ \item \textbf{(24 Points) function \#4:} Go to \texttt{http://www.textfiles.com/stories/} and check that this site
+\footnote {Disclaimer: we did not really check whether this website contains any improper story or language.
+If you find something improper, please ignore this site and use some other source} hosts multiple stories
+while each story is in a textfile. Download a textfile of your choice, which has atleast 1000 words,
+and save the file as \texttt{story.txt}. Your program needs to read this file and process it to
+collect some statistics. In particular, report the total number of words in the story,
+the number of distinct words,
+the second-most frequent word and its frequency. Also, find the number of words which start with character $s$. 
+\textbf {Hints:} You may use List and Map (or HashMap) data structures as they are available in Scala. You may design a regular expression to define a \em{word}.
+
+
+
+    % \vspace{2cm}
+
+    \end{enumerate}
+
+\end{document}
+
+
