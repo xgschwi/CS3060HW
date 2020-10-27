@@ -1,2 +1,2 @@
-hiya
-yep
+This is line 1
+This is line 2 for this assignment
