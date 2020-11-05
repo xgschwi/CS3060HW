@@ -26,9 +26,9 @@ The total number of images is: 1
 The total number of scripts is: 2
 The total amount of images is: 172
 The number of pages with more than two images are: 1
-The execution time of using a sequential collection was about: 3 seconds
+The execution time of using a sequential collection was about: 4 seconds
 The execution time of using a parallel collection was about: 0 seconds
-The time saved with the parallel collection was about: 2
+The time saved with the parallel collection was about: 3 seconds
 
 
 

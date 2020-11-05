@@ -10,7 +10,7 @@ object Task3 {
    println("The sum of cubes of List(1,3,6,4,2) is: " + foo2(t2))
   }
 
-  def foo1(t:List[String]):List[List[Char]]= t.map(word=> word.toList.distinct)
+  def foo1(t:List[String]):List[List[Char]]= t.map(word=> word.toList.distinct) // Maps distinct letters in strings
 
-  def foo2(t:List[Int]):Int= t.foldLeft(0){case(f, l)=> f+(l*l*l)}
+  def foo2(t:List[Int]):Int= t.foldLeft(0){case(f, l)=> f+(l*l*l)} // computes sum of cubes
 }
