@@ -99,8 +99,8 @@ The cube of 54 is 157464
 
 For task 4, the user may run it via "scala task4.scala", this will run an analysis on the text file "story.txt" to give statistics on the total words, number of distinct words, the second most frequent word, and the number of words starting with the letter s.
 
-xgschwi@csvm14:~/fa20-cs3060-hw/hw5$ xgschwi@csvm14:~/fa20-cs3060-hw/hw5$ scala task4.scala
-The total number of words is: 1461
-The number of Distinct Words is: 552
-The second most frequent word is: and 58
-The number of words that start with s is 52
+xgschwi@csvm14:~/fa20-cs3060-hw/hw5$ scala task4.scala
+The total number of words is: 986
+The number of Distinct Words is: 441
+The second most frequent word is: to 30
+The number of words that start with s is 39

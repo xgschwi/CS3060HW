@@ -4,8 +4,8 @@ import scala.io._
 object Task2 {
   def main(args:Array[String]):Unit={
     val source = scala.io.StdIn.readLine("Please input a webpage URL to process: ")
-    println(source)
-    val page:URL = scala.io.Source.fromURL(source)("ISO-8859-1").mkString
+    //println(source)
+    val page:URL = scala.io.Source.fromURL(args(0)).mkString
 
     val imgRegex = "(?i)<img.+?src=\"(http.+?)\".*?>(.+?)</img>".r
     val scriptRegex = "(?i)<script.*</script>".r
@@ -28,7 +28,7 @@ object Task2 {
     var cur = ""
     val t1 = System.currentTimeMillis()
     var list2 = list1.map{url =>
-      cur = io.Source.fromURL(url)("ISO-8859-1").mkString
+      cur = io.Source.fromURL(url).mkString
       imgRegex.findAllIn(cur).matchData.toList.size}
 
     var sum = list2.reduce(_+_)
