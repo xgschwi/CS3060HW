@@ -54,11 +54,11 @@ object Task2 {
 
     // Part D
 
-    println("The execution time of using a sequential collection was: " + (t2-t1)/1000 + " seconds")
+    println("The execution time of using a sequential collection was about: " + (t2-t1)/1000 + " seconds")
 
-    println("The execution time of using a parallel collection was: " + (t4-t3)/1000 + " seconds")
+    println("The execution time of using a parallel collection was about: " + (t4-t3)/1000 + " seconds")
     
-    println("The time saved was: " + ((t4-t3)-(t2-t1))/1000)
+    println("The time saved with the parallel collection was about: " + ((t2-t1)-(t4-t3))/1000)
 
   }
 
