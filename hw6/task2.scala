@@ -57,6 +57,9 @@ object Task2 {
     println("The execution time of using a sequential collection was: " + (t2-t1)/1000 + " seconds")
 
     println("The execution time of using a parallel collection was: " + (t4-t3)/1000 + " seconds")
+    
+    println("The time saved was: " + ((t4-t3)-(t2-t1))/1000)
+
   }
 
   def countImages(url:String):Int= imgRegex.findAllIn(io.Source.fromURL(url, "ISO-8859-1").mkString).matchData.toList.size
