@@ -19,7 +19,7 @@ object Task2 {
     var tot = imgRegex.findAllIn(page).matchData.toList.size // total images
     println("The total number of images is: " + tot)
 
-    var stot = scriptRegex.findAllIn(page).matchData.toList.size // total images
+    var stot = scriptRegex.findAllIn(page).matchData.toList.size // total scripts
     println("The total number of scripts is: " + stot)
 
 
