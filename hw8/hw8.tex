@@ -1,0 +1,110 @@
+\documentclass[paper=letter, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage{enumitem}
+\usepackage{listings,multicol}
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+% \fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{hyperref}
+%----------------------------------------------------------------------------------------
+%   TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{ 
+    \normalfont \normalsize 
+    \textsc{CS 3060 Programming Languages, Fall 2020} \\ [25pt] % Your university, school and/or department name(s)
+    \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+    \huge Assignment \#8  \\ % The assignment title
+    \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+% \author{John Smith} % Your name
+
+% \date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+    \begin{center}
+         Assignment \#8\\
+        \small CS 3060 Programming Languages, Fall 2020 \\
+        \small Instructor: S. Roy \\
+        \huge Haskell \#2
+    \end{center}
+    
+    \textbf{Due Date:} Dec 1 @ 11:59 PM. \\
+    \textbf{Total Points:} 60 points \\
+
+    \textbf{Directions:} Using the source provided via Gitlab \@ \texttt{https://gitlab.com/sanroy/fa20-cs3060-hw/},
+complete the assignment below. The process for completing this assignment should be as follows:
+
+    \begin{enumerate}[noitemsep]
+        \item You already forked the Repository ``sanroy/fa20-cs3060-hw'' to a repository ``yourId/fa20-cs3060-hw'' under your username. If not, do it now.
+        \item Get a copy of hw8 folder in ``sanroy/fa20-cs3060-hw'' repository as a hw8 folder in your repository ``yourId/fa20-cs3060-hw''
+        \item Complete the assignment, committing changes to git. Each task code should be in a separate file. As an example, task1.hs for Task 1.
+        \item Push all commits to your Gitlab repository
+        \item If you have done yet done so, sdd TA (username: prabeshpaudel) as a member of your Gitlab repository
+    \end{enumerate}
+
+
+
+
+    \textbf{Tasks:}
+    \begin{enumerate}
+
+        \item \textbf{Task \#1: (30 points)} Write a Haskell function for each of the following. In your code, you need to specify the \textbf{input and output type} of each function. 
+
+(a) (10 points) Write a Haskell function \emph{bar} which takes an integer \emph{x} as input parameter 
+and returns the product of all positive even integer(\emph{y})s' cubes whereas \emph{y} is smaller than \emph{x}. 
+You need to use \emph{foldl} to do the above computation. 
+As an example, if \emph{x} is 10, then \emph{bar} will compute (${2^3} \times {4^3} \times \ldots \times {8^3}$).
+\emph{Writing README carries 1 point.}
+
+
+(b)(10 points) Write a Haskell function \emph{upperCharCount} which takes a string \emph{word} as input, 
+and counts how many letters in \emph{word} are in uppercase, and returns the count. 
+As an example, if \emph{word} is "abDfGi", then \emph{upperCharCount} returns 2. 
+\emph{Writing README carries 1 point.}
+
+(c)(10 points) Write a Haskell function \emph{shrtStrCount} which takes a list of strings as input, and 
+counts how many strings have length less than 3, and returns the count. 
+As an example, if input \emph{list} is ["abcd", "de", "fghtestwsd"], then \emph{shrtStrCount} returns 1. 
+\emph{Writing README carries 1 point.}
+ 
+       \item \textbf{Task \#2: (30 points)} Refer to the user-defined types \texttt{Card} and \texttt{Hand} in the textbook (cards-with-show.hs).
+Also, see the \texttt{value} and \texttt{cardvalue} function therein. Write a Haskell function for each of the following. 
+In your code, you need to specify the \textbf{input and output type} of each function. 
+
+(a) (10 points) Write a function named \texttt{upperCard} which takes two Cards and returns the higher value Card. If there is a tie, then either Card can be returned.
+
+(b) (10 points) Write a function named \texttt{sumValue} which takes a Hand and returns the sum of all values of cards in that hand.
+
+(c) (10 points) Write a function named \texttt{lowerHand} which takes two Hands and returns the Hand which has the lower value. If there is a tie, then either Hand can be returned.
+
+\emph{Writing README carries 2 points.}
+
+    % \vspace{2cm}
+    
+    \end{enumerate}
+
+\end{document}
+
+
