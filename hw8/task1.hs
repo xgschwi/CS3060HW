@@ -1,19 +1,25 @@
 module Main where
-import Data.Char
+   import Data.Char
 
-bar:: [Int] -> Int
+   bar:: Int -> Int
 
-bar[1] = 0
-bar x= foldl(\acc y -> if y `mod` 2 == 0 then acc*y*y*y else acc) 1 x
+   bar 0 = 0
+   bar 1 = 0
+   bar 2 = 0-- Each of these should be zero
 
-upperCharCount:: [Char] -> Int
+   --Sums the cubes of even integers below x
+   bar x = foldl(\acc y -> if y `mod` 2 == 0 then acc*y*y*y else acc) 1 [1..x-1]
 
-upperCharCount[] = 0
-upperCharCount (word:t) = if isUpper(word) then 1 + upperCharCount t else upperCharCount t
+   -- Gives the count of uppercase characters in a string
+   upperCharCount:: [Char] -> Int
 
-shrtStrCount:: [String]->Int
+   upperCharCount[] = 0 -- Base Case
+   upperCharCount (word:t) = if isUpper(word) then 1 + upperCharCount t else upperCharCount t
 
-shrtStrCount[] = 0
-shrtStrCount (list:t) = if length list > 3 then 1 + shrtStrCount t else shrtStrCount t
+   -- Count of short strings
+   shrtStrCount:: [String]->Int
 
-main = print()
+   shrtStrCount[] = 0
+   shrtStrCount (list:t) = if length list < 3 then 1 + shrtStrCount t else shrtStrCount t
+
+   main = print()
