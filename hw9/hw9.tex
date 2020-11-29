@@ -1,0 +1,106 @@
+\documentclass[paper=letter, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage{enumitem}
+\usepackage{listings,multicol}
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+% \fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{hyperref}
+%----------------------------------------------------------------------------------------
+%   TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{ 
+    \normalfont \normalsize 
+    \textsc{CS 3060 Programming Languages, Fall 2020} \\ [25pt] % Your university, school and/or department name(s)
+    \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+    \huge Assignment \#9  \\ % The assignment title
+    \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+% \author{John Smith} % Your name
+
+% \date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+    \begin{center}
+         Assignment \#9\\
+        \small CS 3060 Programming Languages, Fall 2020 \\
+        \small Instructor: Dr. Roy \\
+        \huge Scala-Haskell 
+    \end{center}
+    
+    \textbf{Due Date:} Dec 4 (Fri) @ 11.59 PM. \\
+    \textbf{Total Points:} 60 points \\
+    \textbf{Note:} This is an extra assignment, which may help you improve your grade as we will be picking up your best 8 assignments out of 9 assignments.\\
+
+    \textbf{Directions:} Using the source provided via Gitlab \@ \texttt{https://gitlab.com/sanroy/fa20-cs3060-hw/},
+complete the assignment below. The process for completing this assignment should be as follows:
+
+    \begin{enumerate}[noitemsep]
+        \item You already forked the Repository ``sanroy/fa20-cs3060-hw'' to a repository ``yourId/fa20-cs3060-hw'' under your username. If not, do it now.
+        \item Get a copy of hw9 folder in ``sanroy/fa20-cs3060-hw'' repository as a hw9 folder in your repository ``yourId/fa20-cs3060-hw''
+        \item Complete the assignment, committing changes to git. Each task code should be in a separate file. As an example, task1.scala for Task 1.
+        \item Push all commits to your Gitlab repository
+        \item If you have done yet done so, sdd TA (username: prabeshpaudel) as a member of your Gitlab repository
+    \end{enumerate}
+
+
+    \textbf{Tasks:}
+    \begin{enumerate}
+
+        \item \textbf{Task \#1: (20 points)} Scala. Let's get back to Task 2 of the last Scala assignment where we developed a mini web crawler. 
+You know that in Task 2c we did not use parallel computation (i.e. multi-Threaded processing) last time. 
+Your current task is to do exactly that, i.e., redo Task 2c through parallel computation.  
+You need to use the concept of \texttt{par} collection, and concept of functional programming while ensuring that your program is free from \texttt{side effect}. 
+\emph{Writing README carries 2 points.}
+
+        \item \textbf{Task \#2: (20 points)} Haskel. Write a Haskell function named \texttt{myCount} 
+which takes two parameters, a \texttt{list} and an item \texttt{p}. 
+The myCount function returns how many times \texttt{p} appears in \texttt{list}. 
+Your function needs to be generic, e.g. should work for integer as well as characters. 
+Test your function as follows and report the result in README.
+
+myCount  ['a','b','a','b','a'] 'b'  should return 2
+
+myCount  [5,1,5,2,3]  5  should return 2
+
+\emph{Writing README carries 2 points.}
+        \item \textbf{Task \#3: (20 points)} Haskel. Haskell recursive type: 
+Write a function \texttt{lessThan5} which takes a binary tree as input and returns 
+the number of nodes (in the tree) that hold value less than 5. Use the following data type for the binary tree, 
+where each internal node as well as each leaf node holds a value.
+
+data Tree a = Leaf a | BinTree (Tree a) a (Tree a)  deriving (Show)
+
+Build a tree of 10 or more nodes with height 3 or more 
+(where each node holding an integer) and apply your \texttt{lessThan5} 
+function on the tree, and report the output in README file. \emph{Writing README carries 2 points.}
+
+    % \vspace{2cm}
+    
+    \end{enumerate}
+
+\end{document}
+
+
