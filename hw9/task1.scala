@@ -55,11 +55,12 @@ object Task2 {
 
     val res2 = list2.map{url=> countImages(url)}
 
-    double = 0
-    res2.foreach{img => if(img >2) double += 1}
-    println("The number of pages with more than two images (par) are: " + double)
     val t4 = System.currentTimeMillis()
 
+
+    double = 0
+    res2.foreach{img => if(img>2) double += 1}
+    println("The number of pages with more than two images (par) are: " + double)
 
     // Part D
 
