@@ -1,4 +1,4 @@
 # fa20-cs3060-hw
 
-homework assignments
-So far this contains homework assignments 1 and 2. For homework 2, the readme file inside the hw2 folder discusses more
+### Homework Assignments
+This repository contains code for assignments using Ruby, Prolog, Scala, and Haskell to build on skills regarding functional, procedural, and object oriented programming.
